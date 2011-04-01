@@ -1,0 +1,6 @@
+echo "How many jobs do you want to run?"
+read jobs
+. build/envsetup.sh
+lunch salvage_incredible-userdebug
+make clean
+make -j$jobs otapackage

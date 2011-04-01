@@ -1,0 +1,4 @@
+. build/envsetup.sh
+lunch salvage_supersonic-userdebug
+make clean
+make -j`grep 'processor' /proc/cpuinfo | wc -l` otapackage
